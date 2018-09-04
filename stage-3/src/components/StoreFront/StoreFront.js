@@ -30,11 +30,9 @@ class StoreFront extends Component {
     }
 }
 
-function mapStateToProps(state) {
-    return {
+const mapStateToProps = (state) => ({
         products: state.products,
-        loading: state.loading,
-    }
-}
+        loading: state.loading
+});
 
 export default connect(mapStateToProps, {addToShoppingCart, getAllProducts})(StoreFront);
